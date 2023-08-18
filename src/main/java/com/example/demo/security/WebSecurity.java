@@ -30,7 +30,7 @@ public class WebSecurity {
 		and().sessionManagement().
 		sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 		.and().authorizeRequests()
-		.antMatchers("/API/V1.0/Autorizacion/tokens/obtener/**")
+		.antMatchers("/tokens/obtener/**")
 		.permitAll().anyRequest().authenticated();
 		
 		http.authenticationProvider(this.authenticationProvider());
